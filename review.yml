@@ -1,0 +1,68 @@
+reviewer: API Evangelist
+date: '2026-07-23'
+provider: Current
+domain: current.com
+finding: >-
+  Current (Finco Services, Inc.) is a NYC-based U.S. consumer fintech/neobank with no first-party
+  public API program. It represents the common U.S. voluntary-open-finance pattern of an
+  aggregator-only surface rather than a mandated or self-published API contract.
+developer_portal:
+  present: false
+  probed:
+  - url: https://developer.current.com/
+    result: DNS does not resolve (NXDOMAIN)
+  - url: https://current.com/developers/
+    http_status: 404
+  - url: https://current.com/api/
+    http_status: 404
+  - url: https://api.current.com/
+    http_status: 404
+    note: host resolves but returns 404 at root; undocumented mobile-app backend, not a public API
+downloadable_specs:
+  openapi: false
+  swagger: false
+  postman: false
+  note: No first-party OpenAPI/Swagger/Postman is publicly downloadable. No specs harvested.
+auth_model:
+  first_party: none
+  note: >-
+    No Current-published OAuth2/OIDC authorization server, API keys, or mTLS. Any authorization is
+    handled by the aggregator's consumer-permissioned consent flow, not by Current.
+open_finance_posture:
+  type: aggregator-only
+  aggregators:
+  - name: Plaid
+    documented: true
+    source: https://www.openbankingtracker.com/provider/current
+  fdx_participation: not documented
+  cfpb_1033_posture: not publicly stated
+  akoya_mx_finicity: not documented
+partner_banks:
+- Choice Financial Group
+- Cross River Bank
+identity_notes:
+  - Over six million members; mobile-first consumer banking platform.
+  - >-
+    github.com/current-finance is an UNRELATED DeFi SDK organization and was deliberately NOT
+    attributed to this provider.
+common_links_verified:
+  - url: https://current.com/
+    http_status: 200
+  - url: https://current.com/blog/
+    http_status: 200
+  - url: https://current.com/terms_of_service/
+    http_status: 200
+  - url: https://current.com/docs/current_privacy_policy/
+    http_status: 200
+  - url: https://support.current.com/hc/en-us
+    http_status: 403
+    note: Zendesk bot-challenge; valid for human users, retained
+  - url: https://www.linkedin.com/company/current
+    result: valid Current fintech company page, added
+  - url: https://status.current.com/
+    result: does not resolve; no StatusPage added
+spec_provenance: none (no first-party or harvestable specifications exist)
+conclusion: >-
+  Deepened honestly. Current has no first-party API to represent; the only real programmatic surface
+  is aggregator-mediated (Plaid) consumer-permissioned data access, now recorded as a single honest
+  apis[] entry with no fabricated specs.
