@@ -16,6 +16,17 @@ description: >-
   consumer-permissioned basis. This profile captures the company's public web, legal, and security
   surface and its aggregator-only data-access posture.
 url: https://raw.githubusercontent.com/api-evangelist/current/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-11'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
