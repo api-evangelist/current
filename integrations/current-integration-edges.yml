@@ -1,0 +1,31 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/current/integrations
+- https://n8n.io/integrations/current/
+- https://composio.dev/toolkits/current
+- https://monid.ai/tools/current
+checked:
+- https://composio.dev/toolkits/current
+- https://monid.ai/tools/current
+- https://n8n.io/integrations/current/
+- https://zapier.com/apps/current/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: western-union
+  partner: western-union
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: banking-partner
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/western-union/blob/main/openapi/western-union-payments-api-openapi.yml
+  contract_reference:
+    repo: western-union
+    spec_file: western-union-payments-api-openapi.yml
+    value: current
+    property: schemas.BankAccount.accountType
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates: []
